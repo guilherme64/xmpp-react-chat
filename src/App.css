@@ -1,38 +1,91 @@
 .App {
+}
+
+.mainScreen {
+  display: grid;
+  grid-template-rows: 40px auto;
+}
+
+.topbar{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: 2px black solid;
+}
+.login{
   text-align: center;
+  vertical-align: middle;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.signup{
+  text-align: center;
+  vertical-align: middle;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main{
+  height: 90%;
+  display: grid;
+  grid-template-areas:"cont msg msg"
+                      "cont msg msg"
+                      "inp inp inp";
+  grid-template-rows: 500px 50px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.contacts{
+  margin:10px;
+  padding:5px;
+  grid-area: cont;
+  overflow-y: scroll;
+}
+.contacts__contact{
+  margin: 5px;
+  font-size: 1.2em;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 2px;
+  margin:3px;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.user{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  border: 1px solid gray;
+  margin:2px;
+  border-radius: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.messages{
+  margin:10px;
+  padding:5px;
+  grid-area: msg;
+  overflow-y: scroll;
+}
+
+.input{
+  margin-left: 10px;
+  grid-area: inp;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.input__text{
+  align-self: center;
+  height: 30px;
+  font-size: 25px;
+}
+
+.message{
+  display: block;
+  border: 1px black solid;
+  padding: 3px;
+  margin: 3px;
+}
+.message__actors{
+  font-size:0.9em;
+}
+.message__body{
+  padding: 5px;
+  font-size: 1.3em;
+  text-align: center;
 }
